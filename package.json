@@ -15,7 +15,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-input-autosize": "^2.2.2",
-    "react-scripts": "3.3.1",
+    "react-scripts": "4.0.3",
     "slate": "^0.58.0",
     "slate-history": "^0.58.0",
     "slate-react": "^0.58.0",
