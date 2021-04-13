@@ -15,7 +15,7 @@ const App = () => {
   const [recentItems, setRecentItems] = useState(Recent.get());
   const [alexa, setAlexa] = useState("");
   const [google, setGoogle] = useState("");
-  const [bixby, setBixby] = useState("");
+  const [azure, setAzure] = useState("");
   const [plainText, setPlaintext] = useState("");
   return (
     <div className="root">
@@ -40,7 +40,7 @@ const App = () => {
             onChange={(smd) => {
               setAlexa(speech.toSSML(smd, { platform: "amazon-alexa" }));
               setGoogle(speech.toSSML(smd, { platform: "google-assistant" }));
-              // setBixby(speech.toSSML(smd, { platform: "samsung-bixby" }));
+              setAzure(speech.toSSML(smd, { platform: "microsoft-azure" }));
               setPlaintext(speech.toText(smd));
             }}
           />
@@ -78,11 +78,11 @@ const App = () => {
             title="Google"
             panel={<div style={{ minHeight: "100px" }}>{google}</div>}
           />
-          {/* <Tab
-            id="bixby"
-            title="Bixby"
-            panel={<div style={{ height: "100px" }}>{bixby}</div>}
-          /> */}
+          <Tab
+            id="azure"
+            title="Azure"
+            panel={<div style={{ height: "100px" }}>{azure}</div>}
+          />
           <Tab
             id="plaintext"
             title="Plain Text"
